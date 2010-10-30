@@ -1,3 +1,4 @@
+.rvmrc
 *.swp
 .bundle
 db/*.sqlite3
