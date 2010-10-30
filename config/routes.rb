@@ -1,5 +1,12 @@
 Easydays::Application.routes.draw do
-  get 'home/index'
+  controller :home do
+    get 'index'
+    get 'staff', :as => :staff
+    get 'radius', :as => :radius
+    get 'hire_us'
+  end
+
+  resource :moving_calculator, :controller => 'moving_calculator'
 
   root :to => 'home#index'
 
