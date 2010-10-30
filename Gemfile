@@ -30,3 +30,7 @@ gem 'haml'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :development, :test do
+  gem 'rspec-rails', '>= 2.0.0'
+end
