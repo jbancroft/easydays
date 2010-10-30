@@ -1,5 +1,5 @@
 set :application, "easydays"
-set :repository,  "."
+set :repository,  "git@github.com:jbancroft/easydays.git"
 
 set :scm, :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
@@ -15,6 +15,8 @@ $:.unshift(File.expand_path('./lib', ENV['rvm_path'])) # Add RVM's lib directory
 require "rvm/capistrano"                               # Load RVM's capistrano plugin.
 set :rvm_ruby_string, '1.8.7'                     # Or whatever env you want it to run in.
 set :rvm_type, :user
+
+set :user, 'jbancroft'
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
