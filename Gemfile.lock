@@ -28,6 +28,8 @@ GEM
       activemodel (= 3.0.1)
       activesupport (= 3.0.1)
     activesupport (3.0.1)
+    analytical (2.2.0)
+      activesupport
     arel (1.0.1)
       activesupport (~> 3.0.0)
     builder (2.1.2)
@@ -97,6 +99,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  analytical
   capistrano
   haml
   rails (= 3.0.1)
