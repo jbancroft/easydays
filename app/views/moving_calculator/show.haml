@@ -1,10 +1,73 @@
+- content_for :html_head do
+  = javascript_include_tag 'moving_calculator'
 .intro
   %h1 Moving Calculator
-  %div Moving Labor is a fast growing, nation-wide trend!
-  %div Moving Labor will save you money on your next move!
+
+%p You can use this handy form to estimate how long your move will take:
+#moving_calculator
+  #service_type_section.clearfix.field
+    .left What kind of service do you need?
+    %select#service_type{ :name => 'service_type' }
+      %option{ :value => 'load_only' } Load Only
+      %option{ :value => 'unload_only' } Unload Only
+      %option{ :value => 'load_unload' } Both
+  #vehicle_size_section.clearfix.field
+    .left How big is the vehicle?
+    %select#vehicle_size{:name => "vehicle_size"}
+      %option{:value => "10"} 10 ft.
+      %option{:value => "14"} 14 ft.
+      %option{:value => "17"} 17 ft.
+      %option{:value => "24"} 24 ft.
+      %option{:value => "26"} 26 ft.
+  #percent_full_section.clearfix.field
+    .left How full do you expect the vehicle to be when everything is loaded?
+    %select#percent_full{:name => "percent_full"}
+      %option{:value => "10"} 10%
+      %option{:value => "20"} 20%
+      %option{:value => "30"} 30%
+      %option{:value => "40"} 40%
+      %option{:value => "50"} 50%
+      %option{:value => "60"} 60%
+      %option{:value => "70"} 70%
+      %option{:value => "80"} 80%
+      %option{:value => "90"} 90%
+      %option{:selected => "selected", :value => "100"} 100%
+  #elevator_section
+    %label{:for => "elevator"} Are we using an elevator?
+    %input#elevator{:name => "elevator", :type => "checkbox"}/
+  #floors_section.clearfix.field
+    .left How many floors above ground level?
+    %input#floors{:name => "floors", :type => "text", :value => "0"}/
+  #truck_distance_section.clearfix.field
+    .left How many feet away from the door is the truck?
+    %select#truck_distance{:name => 'truck_distance'}
+      %option{:value => '50'} 0-50 ft.
+      %option{:value => '100'} 51-100 ft.
+      %option{:value => '150'} 101-150 ft.
+      %option{:value => '200'} 151-200 ft.
+  #disassembly_section
+    .clearfix.field
+      .left How many pieces of furniture need disassembly/reassembly?
+      %input#disassembly{:name => 'disassembly', :type => 'text', :value => '0', :style => 'width: 50px;'}/
+    .note (Note: We generally do not reassemble a piece unless we were the ones who disassembled it in the first place)
+  #chowder_section.clearfix.field
+    .left How many non-boxed items, open boxes, or poorly packaged items?
+    %input#chowder{:name => 'chowder', :type => 'text', :value => '0', :style => 'width: 50px;'}/
+  #movers_section.clearfix.field
+    .left How many movers do you want on the job?
+    %select#movers{:name => "movers"}
+      %option{:value => "2"} 2
+      %option{:value => "3"} 3
+      %option{:value => "4"} 4
+      %option{:value => "5"} 5
+      %option{:value => "6"} 6
+  %div Your estimated time:
+  .result-section
+    .result 30 minutes
 
 %h2 The System
-%p Moving help is a new system which utilizes customer-rented moving vehicles in order to minimize the price of a move.  Moving helpers are trained specialists who show up at your home to help you on your moving day.  There is a different equation for our helpers, because we have studied the factors which influence how long a move will take.
+- content_for :sidebar do
+  %p Moving help is a new system which utilizes customer-rented moving vehicles in order to minimize the price of a move.  Moving helpers are trained specialists who show up at your home to help you on your moving day.  There is a different equation for our helpers, because we have studied the factors which influence how long a move will take.
 
 %p Here is the equation that we work with:
 %p (2 men loading within 50 ft. of back door, no stairs)

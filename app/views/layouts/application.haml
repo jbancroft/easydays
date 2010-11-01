@@ -6,6 +6,9 @@
     = stylesheet_link_tag :all
     = javascript_include_tag :defaults
     = csrf_meta_tag
+
+    = yield :html_head
+
     = raw analytical.head_append_javascript
   %body
     = raw analytical.body_prepend_javascript
@@ -24,6 +27,7 @@
             %li= link_to('Staff', staff_path)
             %li= link_to('Operational Radius', radius_path)
             %li= link_to('Hire Us', hire_us_path)
+          = yield :sidebar
       .footer
         .small
           Header image courtesy of
