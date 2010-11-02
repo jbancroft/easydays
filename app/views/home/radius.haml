@@ -2,6 +2,14 @@
   %h1 Operational Radius
   %div Moving Labor is a fast growing, nation-wide trend!
 
+.service-map
+  %iframe(width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=113071949408732650055.00049409464b93533fa2d&amp;ll=42.747012,-71.477051&amp;spn=1.936282,3.515625&amp;z=8&amp;output=embed")
+  %br/
+  %small
+    View the
+    %a(href="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=113071949408732650055.00049409464b93533fa2d&amp;ll=42.747012,-71.477051&amp;spn=1.936282,3.515625&amp;z=8&amp;source=embed" style="color:#0000FF;text-align:left") Easy Days Service Area
+    in a larger map
+
 .clearfix
   .left
     %p
@@ -17,8 +25,3 @@
   .right{ :style => 'width: 450px;' }
     %p We service New Hampshire and eastern Massachusetts. Our radius stretches north as far as Concord, NH, west as far as Worcester, MA, south just past Boston, MA and it's surrounding communities.  We're in Keene, NH, Manchester, NH, Lowell, MA, Lawrence, MA, Peabody, MA and anywhere else in that general area.
 
-.clearfix
-  .left
-    = image_tag('pickup_truck_parade.jpg', :alt => 'A Pickup Truck Parade')
-  .right{ :style => 'width: 350px;' }
-    %p{ :style => 'margin-top: 0;' } Please refrain from attempting "pick-up truck parades".  Hard to see, but there are other full trucks ahead.  We had to say we'd try it.  This kind of moving is dirty, terrible, and time consuming.  Nothing ever goes well for the furniture involved.  We know.  We've been there.
