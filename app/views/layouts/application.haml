@@ -28,10 +28,13 @@
             %li= link_to('Operational Radius', radius_path)
             %li= link_to('Hire Us', hire_us_path)
           = yield :sidebar
-      .footer
-        .small
+      .footer.clearfix
+        .small.left
           Header image courtesy of
           %a{ :href => 'http://www.freeimages.co.uk' } freeimages.co.uk
+        .small.right
+          &copy;
+          = "#{DateTime.now.year} Easy Days L.L.C."
     = raw analytical.body_append_javascript
     / This starts the session on movinghelp.com so that the links work properly.
     %iframe{ :src => 'http://www.movinghelp.com/reviews.aspx?id=19744', :width => 1, :height => 1, :frameborder => 0, :scrolling => 'no', :marginwidth => 0, :marginheight => 0 }
