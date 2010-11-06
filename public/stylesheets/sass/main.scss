@@ -91,7 +91,6 @@ h1 {
 }
 
 .intro {
-  border-bottom: solid 10px #33674e;
   padding-bottom: 0.5em;
   div {
     font-size: 1.5em;
@@ -111,10 +110,23 @@ h1 {
   font-size: 0.7em;
 }
 
+.subheading {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.content-box {
+  border-top: solid 10px #33674e;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  background-color: #fffdb9;
+  margin-bottom: 1em;
+}
+
 #moving_calculator {
-  border: solid 3px #33674e;
+  border-top: solid 10px #33674e;
   padding: 0 0.5em;
   background-color: #fffdb9;
+  margin-bottom: 1em;
   div {
     margin: 0.5em 0;
   }

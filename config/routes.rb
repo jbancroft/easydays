@@ -4,6 +4,7 @@ Easydays::Application.routes.draw do
     get 'staff', :as => :staff
     get 'radius', :as => :radius
     get 'hire_us'
+    get 'moving_tips'
   end
 
   resource :moving_calculator, :controller => 'moving_calculator'
