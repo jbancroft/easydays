@@ -51,7 +51,11 @@ var EasyDays = function() {
       time = time + (time * 0.75);
     }
 
-    return time;
+    if (time < 120) {
+      time = 120;
+    }
+
+    return Math.ceil(time);
   };
 };
 
