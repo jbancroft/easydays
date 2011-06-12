@@ -1,5 +1,4 @@
 doc/*
-.rvmrc
 *.swp
 .bundle
 db/*.sqlite3
